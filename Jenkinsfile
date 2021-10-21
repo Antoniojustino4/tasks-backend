@@ -17,7 +17,7 @@ pipeline{
 			}
 			steps{
 				withSonarQubeEnv('SONAR_LOCAL'){
-					bat "cd../ cd../ cd/tools/hudson.plugins.sonar.MsBuildSQRunnerInstallation/SONAR_SCANNER/sonar-scanner-4.6.2.2472/bin/sonar-scanner -e -Dsonar.projectKey=DeployBack -Dsonar.host.url=http://localhost:9000 -Dsonar.login=95ac43c573310416bad7105dbe54908bf38711da-Dsonar.java.binaries=target-Dsonar.coverage.exclusions= **/.mvn/**, **/src/test/**, **/model/**, **Application.java"
+					bat "cd/tools/hudson.plugins.sonar.MsBuildSQRunnerInstallation/SONAR_SCANNER/sonar-scanner-4.6.2.2472/bin/sonar-scanner -e -Dsonar.projectKey=DeployBack -Dsonar.host.url=http://localhost:9000 -Dsonar.login=95ac43c573310416bad7105dbe54908bf38711da-Dsonar.java.binaries=target-Dsonar.coverage.exclusions= **/.mvn/**, **/src/test/**, **/model/**, **Application.java"
 				}
 			}
 		}
